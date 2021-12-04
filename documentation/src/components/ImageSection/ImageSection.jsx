@@ -1,10 +1,10 @@
 import {Image} from '../Image'
 
 const ImageSection = ({imgSrc, title, description}) => (
-    <div>
+    <div >
         <Image src={imgSrc}/>
         <h3>{title}</h3>
-        <p>{description}</p>
+        <p className="ImageSection">{description}</p>
     </div>
 )
 
