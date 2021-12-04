@@ -558,7 +558,7 @@ module.exports = function (webpackEnv) {
       ],
     },
     plugins: [
-      new GoogleSheetToJson({ option: true }),
+      new GoogleSheetToJson({ spreadsheetId: '1WfK9X8PjLpqp28JwU3mjyt8hdMMsd0t-KHlAk9bQKWc', range: 'Sheet1' }),
       // Generates an `index.html` file with the <script> injected.
       new HtmlWebpackPlugin(
         Object.assign(
