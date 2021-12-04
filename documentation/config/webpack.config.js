@@ -560,7 +560,7 @@ module.exports = function (webpackEnv) {
     plugins: [
       new GoogleSheetToJson({
         spreadsheetId: '1WfK9X8PjLpqp28JwU3mjyt8hdMMsd0t-KHlAk9bQKWc',
-        output:  path.join(__dirname, '../src/translations.json'),
+        output:  path.join(__dirname, '../src/translations/'),
         apiKey: env.raw.GOOGLE_API_KEY,
         isDev: isEnvDevelopment
       }),
