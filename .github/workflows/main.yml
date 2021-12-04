@@ -12,7 +12,6 @@ jobs:
 
       - name: Install and Build
         run: |
-          npm install -g gatsby-cli
           npm install --prefix=./documentation
           npm run build --prefix=./documentation
 
@@ -20,4 +19,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.7
         with:
           branch: docs
-          folder: documentation
+          folder: documentation/build
