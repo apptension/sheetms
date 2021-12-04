@@ -1,0 +1,21 @@
+{
+  "name": "google-sheet-to-json",
+  "version": "1.0.0",
+  "description": "A webpack plugin to parse google sheet files into translation jsons",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apptension/google-sheet-to-json.git"
+  },
+  "author": "Daniel Capeletti; Antoni Byszewski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apptension/google-sheet-to-json/issues"
+  },
+  "homepage": "https://github.com/apptension/google-sheet-to-json#readme",
+  "dependencies": {
+    "googleapis": "^92.0.0"
+  }
+}
