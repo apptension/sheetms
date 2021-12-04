@@ -12,6 +12,7 @@ jobs:
 
       - name: Install and Build
         run: |
+          npm install -g gatsby-cli
           npm run build  --prefix=./documentation
 
       - name: Deploy 🚀
