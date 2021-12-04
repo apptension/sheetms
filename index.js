@@ -27,7 +27,11 @@ class GoogleSheetToJsonPlugin {
                   ...previous
               }), {})
 
-              fs.writeFileSync(output, JSON.stringify(formatted));
+              if (!fs.existsSync(output)){
+                  fs.mkdirSync(output);
+              }
+
+              ranges.map((sheet) => fs.writeFileSync(output + sheet + '.json', JSON.stringify(formatted[sheet])));
               return cb ? cb() : null
           }).catch((error) => {
               console.log(error);
