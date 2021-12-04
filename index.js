@@ -1,4 +1,5 @@
 const google = require('googleapis');
+const fs = require('fs');
 
 // A JavaScript class.
 class GoogleSheetToJsonPlugin {
@@ -7,19 +8,22 @@ class GoogleSheetToJsonPlugin {
   }
   // Define `apply` as its prototype method which is supplied with compiler as its argument
   apply(compiler) {
-    console.log("compiler");
     compiler.hooks.emit.tapAsync(
       "GoogleSheetToJsonPlugin",
       (compilation, callback) => {
-          // console.log(google);
-        const sheets = new google.sheets_v4.Sheets({ auth: '' });
-        // console.log(sheets);
-        sheets.spreadsheets.values.get({
+        const sheets = new google.sheets_v4.Sheets({ auth: 'AIzaSyDu5ii5UkC4DDh3eZtdqeGXu-MWxXo-D4s' });
+
+        sheets.spreadsheets.values.batchGet({
             spreadsheetId: this.options.spreadsheetId,
-            range: this.options.range,
-        }).then(({ data }) => {
-            console.log(data);
-            console.log('works?');
+            ranges: this.options.range,
+        }).then(({data}) => {
+            const formatted = data.valueRanges.reduce((previous,{range, values}) => ({
+            [range.replace(/'/g, "").split("!")[0]]: values?.reduce((acc, [key, value]) => ({[key]: value, ...acc}), {}),
+                ...previous
+            }), {})
+
+            fs.writeFileSync(this.options.output, JSON.stringify(formatted));
+
             callback();
         }).catch((error) => {
             console.log(error);
