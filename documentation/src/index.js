@@ -8,7 +8,7 @@ import messages from './translations.json';
 
 ReactDOM.render(
   <React.StrictMode>
-      <IntlProvider locale={navigator.language} messages={messages[navigator.language]}>
+      <IntlProvider locale={navigator.language || 'en'} messages={messages[navigator.language]}>
           <App />
       </IntlProvider>
   </React.StrictMode>,

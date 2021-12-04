@@ -1,6 +1,6 @@
 {
-  "name": "google-sheet-to-json",
-  "version": "1.0.0",
+  "name": "@cpburn/google-sheet-to-json",
+  "version": "0.0.1",
   "description": "A webpack plugin to parse google sheet files into translation jsons",
   "main": "index.js",
   "scripts": {},
@@ -8,19 +8,23 @@
     "type": "git",
     "url": "git+https://github.com/apptension/google-sheet-to-json.git"
   },
-  "author": "Daniel Capeletti; Antoni Byszewski",
+  "author": "Daniel Capeletti <dcapeletti@icloud.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/apptension/google-sheet-to-json/issues"
   },
-  "homepage": "https://apptension.github.io/google-sheet-to-json/documentation",
+  "homepage": "https://elated-hopper-587c96.netlify.app/",
   "dependencies": {
     "googleapis": "^39.2.0"
   },
   "peerDependencies": {
-    "webpack": "^4.0.0 || ^5.0.0"
+    "webpack": "^5.0.0"
   },
   "devDependencies": {
     "webpack": "^5.64.4"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
