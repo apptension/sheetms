@@ -11,21 +11,30 @@ class GoogleSheetToJsonPlugin {
 
   fetchGoogleSheet(cb) {
       const sheets = new google.sheets_v4.Sheets({ auth: this.options.apiKey });
+      const { output, spreadsheetId } = this.options
 
-      sheets.spreadsheets.values.batchGet({
-          spreadsheetId: this.options.spreadsheetId,
-          ranges: this.options.range,
-      }).then(({data}) => {
-          const formatted = data.valueRanges.reduce((previous,{range, values}) => ({
-              [range.replace(/'/g, "").split("!")[0]]: values?.reduce((acc, [key, value]) => ({[key]: value, ...acc}), {}),
-              ...previous
-          }), {})
+      sheets.spreadsheets.get({
+          spreadsheetId
+      }).then(function(response) {
+          const ranges = response.data.sheets.map(({properties}) => properties.title)
 
-          fs.writeFileSync(this.options.output, JSON.stringify(formatted));
-          return cb ? cb() : null
-    }).catch((error) => {
-          console.log(error);
-          return cb ? cb() : null;
+          sheets.spreadsheets.values.batchGet({
+              spreadsheetId,
+              ranges: ranges.map(range => `${range}!A:B`),
+          }).then(({data}) => {
+              const formatted = data.valueRanges.reduce((previous,{range, values}) => ({
+                  [range.replace(/'/g, "").split("!")[0]]: values?.reduce((acc, [key, value]) => ({[key]: value, ...acc}), {}),
+                  ...previous
+              }), {})
+
+              fs.writeFileSync(output, JSON.stringify(formatted));
+              return cb ? cb() : null
+          }).catch((error) => {
+              console.log(error);
+              return cb ? cb() : null;
+          });
+      }, function(response) {
+          console.log('Error: ' + response.result.error.message);
       });
   }
   // Define `apply` as its prototype method which is supplied with compiler as its argument
