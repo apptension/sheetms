@@ -4,14 +4,14 @@ const fs = require('fs');
 class GoogleSheetToJsonPlugin {
   constructor(options) {
     this.options = options;
-    if (this.options.isDev) {
+    if (this.options?.isDev) {
         this.fetchGoogleSheet();
     }
   }
 
   fetchGoogleSheet(cb) {
-      const sheets = new google.sheets_v4.Sheets({ auth: this.options.apiKey });
-      const { output, spreadsheetId } = this.options
+      const { output, spreadsheetId, apiKey } = this.options
+      const sheets = new google.sheets_v4.Sheets({ auth: apiKey });
 
       sheets.spreadsheets.get({
           spreadsheetId

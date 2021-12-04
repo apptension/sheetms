@@ -16,5 +16,11 @@
   "homepage": "https://apptension.github.io/google-sheet-to-json/documentation",
   "dependencies": {
     "googleapis": "^39.2.0"
+  },
+  "peerDependencies": {
+    "webpack": "^4.0.0 || ^5.0.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.64.4"
   }
 }
