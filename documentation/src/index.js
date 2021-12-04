@@ -2,11 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { IntlProvider } from 'react-intl';
 import reportWebVitals from './reportWebVitals';
+import messages from './translations.json';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <IntlProvider locale={navigator.language} messages={messages[navigator.language]}>
+          <App />
+      </IntlProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
