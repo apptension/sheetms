@@ -1,8 +1,1 @@
-{
-  "en-GB": {
-    "title": "text 1232"
-  },
-  "pl": {
-    "title": "tekst"
-  }
-}
+{"en-GB":{"test":"test123"},"pl-PL":{"banner.title":"This is a cool banner","title":"this is title"}}
