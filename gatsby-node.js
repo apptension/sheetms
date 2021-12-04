@@ -1,5 +1,6 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const GoogleSheetToJsonPlugin = require("../index.js")
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
@@ -112,4 +113,9 @@ exports.createSchemaCustomization = ({ actions }) => {
       slug: String
     }
   `)
+}
+
+exports.onCreateWebpackConfig = ({ plugins }) => {
+  console.log("starting")
+  plugins: [new GoogleSheetToJsonPlugin({ options: true })]
 }
