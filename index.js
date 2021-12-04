@@ -8,7 +8,7 @@ class GoogleSheetToJsonPlugin {
   }
   // Define `apply` as its prototype method which is supplied with compiler as its argument
   apply(compiler) {
-    compiler.hooks.emit.tapAsync(
+    compiler.hooks.beforeRun.tapAsync(
       "GoogleSheetToJsonPlugin",
       (compilation, callback) => {
         const sheets = new google.sheets_v4.Sheets({ auth: 'AIzaSyDu5ii5UkC4DDh3eZtdqeGXu-MWxXo-D4s' });

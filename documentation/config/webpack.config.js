@@ -26,7 +26,7 @@ const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpackPlugin');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
-const GoogleSheetToJson = require('../../index');
+const GoogleSheetToJson = require('GoogleSheetToJson');
 
 const postcssNormalize = require('postcss-normalize');
 
@@ -558,7 +558,11 @@ module.exports = function (webpackEnv) {
       ],
     },
     plugins: [
-      new GoogleSheetToJson({ spreadsheetId: '', range: ['pl-PL!A:B', 'en-GB!A:B'], output:  path.join(__dirname, '../src/translations.json') }),
+      new GoogleSheetToJson({
+        spreadsheetId: '1WfK9X8PjLpqp28JwU3mjyt8hdMMsd0t-KHlAk9bQKWc',
+        range: ['pl-PL!A:B', 'en-GB!A:B'],
+        output:  path.join(__dirname, '../src/translations.json'),
+      }),
       // Generates an `index.html` file with the <script> injected.
       new HtmlWebpackPlugin(
         Object.assign(
