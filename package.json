@@ -3,7 +3,6 @@
   "version": "0.0.2",
   "description": "A webpack plugin to parse google sheet files into translation jsons",
   "main": "index.js",
-  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/apptension/google-sheet-to-json.git"
