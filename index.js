@@ -12,12 +12,12 @@ class GoogleSheetToJsonPlugin {
       "GoogleSheetToJsonPlugin",
       (compilation, callback) => {
           // console.log(google);
-        const sheets = new google.sheets_v4.Sheets({ auth: { apiKey: '' } });
-        console.log(sheets);
+        const sheets = new google.sheets_v4.Sheets({ auth: '' });
+        // console.log(sheets);
         sheets.spreadsheets.values.get({
             spreadsheetId: this.options.spreadsheetId,
             range: this.options.range,
-        }).then((data) => {
+        }).then(({ data }) => {
             console.log(data);
             console.log('works?');
             callback();
