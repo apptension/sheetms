@@ -13,7 +13,7 @@
   "bugs": {
     "url": "https://github.com/apptension/google-sheet-to-json/issues"
   },
-  "homepage": "https://github.com/apptension/google-sheet-to-json#readme",
+  "homepage": "https://apptension.github.io/google-sheet-to-json/documentation",
   "dependencies": {
     "googleapis": "^39.2.0"
   }
