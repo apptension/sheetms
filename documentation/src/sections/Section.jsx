@@ -1,11 +1,15 @@
 
-import {ImageSection} from '../components/ImageSection'
+import {Image} from '../components/Image'
 
 
-const Section = ({imgSrc, imgTitle, title, description}) => (
+const Section = ({imgSrc, sectionTitle, title, description, children}) => (
     <section className="section__container">
-        <h1 id="getStarted"> {title}</h1>
-        <ImageSection imgSrc={imgSrc} title={imgTitle} description={description}/>
+        <div className="container">
+            <h1 id="getStarted"> {title}</h1>
+            <Image src={imgSrc}/>
+            <h3>{sectionTitle}</h3>
+            {children}
+        </div>
     </section>
 )
 
