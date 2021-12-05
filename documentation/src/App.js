@@ -12,20 +12,41 @@ function App() {
     <div className="App">
       <Header/>
       <Section title={<FormattedMessage id="howItWorks.title" defaultMessage="How it works?" />} imgSrc={img1} sectionTitle={'Create a Google Spreadsheet'}>
-        <p>'Create a Google Spreadsheet and fill it with wanted data. In "A" column place keys and in the "B" column type the relevant translation.'</p>
+        <p>
+            <FormattedMessage id="howItWorks.description" defaultMessage={`Create a Google Spreadsheet and fill it with wanted data. In "A" column place keys and in the "B" column type the relevant translation.`} />
+        </p>
       </Section>
       <div className="container">
-        <div className="warning"><img src={warnignImg}/>Remeber to place the keys in A column and translations in the B column</div>
+        <div className="warning"><img src={warnignImg}/>
+            <FormattedMessage id="howItWorks.warning" defaultMessage="Remember to place the keys in A column and translations in the B column" />
+        </div>
       </div>
-      <Section title={undefined} imgSrc={img2} sectionTitle={'Name the spreadsheet'}>
-      <p>Name the spreadsheets as languages name provided by browser namespace.</p>
+      <Section title={undefined} imgSrc={img2} sectionTitle={<FormattedMessage id="howItWorks.name" defaultMessage="Name the spreadsheet" />}>
+      <p>
+          <FormattedMessage id="howItWorks.nameSpreadsheet" defaultMessage="Name the spreadsheets as languages name provided by browser namespace." />
+      </p>
       <p className="m-0">Example languages</p>
       <ul>
-        <li><span className="snippet">en</span> for English</li>
-        <li><span className="snippet">en-GB</span> for English spoken in United Kingdom</li>
-        <li><span className="snippet">fr-FR</span> for French spoken in France</li>
+        <li>
+            <span className="snippet">
+                <FormattedMessage id="howItWorks.en" defaultMessage="en" />
+            </span>
+            <FormattedMessage id="howItWorks.forEnglish" defaultMessage=" for English" />
+        </li>
+        <li>
+            <span className="snippet">
+                <FormattedMessage id="howItWorks.enGB" defaultMessage="en-GB" />
+            </span>
+            <FormattedMessage id="howItWorks.forGBEnglish" defaultMessage=" for English spoken in United Kingdom" />
+        </li>
+        <li>
+            <span className="snippet">
+                <FormattedMessage id="howItWorks.frFr" defaultMessage="fr-FR" />
+            </span>
+            <FormattedMessage id="howItWorks.forFrench" defaultMessage=" for French spoken in France" />
+        </li>
       </ul>
-      <p> List you can find here: <a href="http://www.lingoes.net/en/translator/langcode.htm" target="_blank" rel="noreferrer">browser languages list</a></p>
+      <p> <FormattedMessage id="howItWorks.list" defaultMessage="List you can find here:" /> <a href="http://www.lingoes.net/en/translator/langcode.htm" target="_blank" rel="noreferrer"><FormattedMessage id="howItWorks.browser" defaultMessage="browser languages list" /> </a></p>
       </Section>
 
 
@@ -33,12 +54,12 @@ function App() {
 
           <pre className="codesnippet__pre">
             <code className="codesnippet__code">
-              <div>npm i @cpburn/sheetms</div>
+              <div><FormattedMessage id="howItWorks.package" defaultMessage="npm i sheetms-webpack-plugin" /></div>
             </code>
           </pre>
 
-          <h3>Install package in your project</h3>
-          <p>Run yarn add or npm install command in order to add the package to your project</p>
+          <h3><FormattedMessage id="howItWorks.install" defaultMessage="Install package in your project" /></h3>
+          <p><FormattedMessage id="howItWorks.installCommand" defaultMessage="Run yarn add or npm install command in order to add the package to your project" /></p>
 
           <pre className="codesnippet__pre">
           <code className="codesnippet__code">
@@ -52,8 +73,8 @@ function App() {
           </code>
           </pre>
 
-          <h3>Configure</h3>
-          <p>Create a configuration of the plugin in <span className="strong">webpack.config.js</span></p>
+          <h3><FormattedMessage id="howItWorks.configure" defaultMessage="Configure"/></h3>
+          <p><FormattedMessage id="howItWorks.create" defaultMessage="Create a configuration of the plugin in" /> <span className="strong">webpack.config.js</span></p>
 
           <ul>
             <li><span className="snippet">spreadsheetId</span><span className="string">: string</span> - The Google Spreadsheet id</li>
@@ -82,8 +103,8 @@ function App() {
           </code>
           </pre>
 
-          <h3>Get your content!</h3>
-          <p>Use content generated in<span className="strong">.json</span> files!</p>
+          <h3><FormattedMessage id="howItWorks.getContent" defaultMessage="Get your content!"/></h3>
+          <p><FormattedMessage id="howItWorks.useContent" defaultMessage="Use content generated in" /><span className="strong">.json</span> files!</p>
 
 
         <ContributorsSection/>
