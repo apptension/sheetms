@@ -1,5 +1,5 @@
 {
-  "name": "sheetms-webpack-plugin",
+  "name": "@apptension/sheetms-webpack-plugin",
   "version": "0.0.2",
   "description": "A webpack plugin to parse google sheet files into translation jsons",
   "main": "index.js",
