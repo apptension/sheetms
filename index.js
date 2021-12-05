@@ -1,5 +1,6 @@
 const google = require('googleapis');
 const fs = require('fs');
+const path = require('path');
 
 class GoogleSheetToJsonPlugin {
   constructor(options) {
@@ -31,7 +32,7 @@ class GoogleSheetToJsonPlugin {
                   fs.mkdirSync(output);
               }
 
-              ranges.map((sheet) => fs.writeFileSync(output + sheet + '.json', JSON.stringify(formatted[sheet])));
+              ranges.map((sheet) => fs.writeFileSync(path.join(output, sheet + '.json'), JSON.stringify(formatted[sheet])));
               return cb ? cb() : null
           }).catch((error) => {
               console.log(error);

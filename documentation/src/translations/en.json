@@ -1,1 +1,1 @@
-{"header.description":"const GoogleSheetToJson = require('GoogleSheetToJson');","title":"Google Sheet to JSON"}
+{"":"<span className=\"important\">!</span>Remember to <span className=\"strongWarning\">place the keys in <span className=\"veryStrongWarning\">A</span>column and <span className=\"strongWarning\">translations in the <span className=\"veryStrongWarning\">B</span> column</span> </span>","howItWorks.title":"Google Sheet to JSON","header.description":"const GoogleSheetToJson = require('GoogleSheetToJson');"}
