@@ -6,7 +6,7 @@ import logo from '../logo.svg';
 const Header = () => (
     <header className="App-header">
       <div className="container">
-          <h1> <FormattedMessage id="header.title" defaultMessage="Hello" /></h1>
+          <h1> <FormattedMessage id="header.title" defaultMessage="Welcome to SheeTMS 💩" /></h1>
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             <code><FormattedMessage id="header.description" defaultMessage="const GoogleSheetToJson = require('sheetms-webpack-plugin');" /></code>
