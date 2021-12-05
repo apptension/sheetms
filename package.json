@@ -1,5 +1,5 @@
 {
-  "name": "@cpburn/google-sheet-to-json",
+  "name": "sheetms",
   "version": "0.0.2",
   "description": "A webpack plugin to parse google sheet files into translation jsons",
   "main": "index.js",
