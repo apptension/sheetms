@@ -104,7 +104,7 @@ function App() {
           </pre>
 
           <h3><FormattedMessage id="howItWorks.getContent" defaultMessage="Get your content!"/></h3>
-          <p><FormattedMessage id="howItWorks.useContent" defaultMessage="Use content generated in" /><span className="strong">.json</span> files!</p>
+          <p><FormattedMessage id="howItWorks.useContent" defaultMessage="Use content generated in .json files" /></p>
 
 
         <ContributorsSection/>
