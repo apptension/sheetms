@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@babel/core": "7.12.3",
-    "@cpburn/google-sheet-to-json": "0.0.1",
+    "@cpburn/google-sheet-to-json": "0.0.2",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.3",
     "@svgr/webpack": "5.5.0",
     "@testing-library/jest-dom": "^5.11.4",
