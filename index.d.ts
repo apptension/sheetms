@@ -8,7 +8,7 @@ declare class GoogleSheetToJsonPlugin extends DefinePlugin {
 
 declare namespace GoogleSheetToJsonPlugin {
     interface Options {
-        isDev?: boolean;
+        forceCreate?: boolean;
         output: string;
         spreadsheetId: string;
         apiKey: string;

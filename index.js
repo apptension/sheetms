@@ -5,7 +5,7 @@ const path = require('path');
 class GoogleSheetToJsonPlugin {
   constructor(options) {
     this.options = options;
-    if (this.options?.isDev) {
+    if (this.options?.forceCreate) {
         this.fetchGoogleSheet();
     }
   }
