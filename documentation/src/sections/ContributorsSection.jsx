@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import {useState, useEffect, memo} from 'react'
 
 function getUser(username) {
     return fetch(`https://api.github.com/users/${username}`)
@@ -12,7 +12,7 @@ function getUser(username) {
 const contributorNames = [ "cpBurn", "Sharqiewicz", "antbysh"]
 
 
-const ContributorsSection = () => {
+const ContributorsSection = memo(() => {
 
     const [contributors, setContributors] = useState([]);
 
@@ -23,12 +23,11 @@ const ContributorsSection = () => {
     return (
         <div className="container">
             <section className="contributors__section">
-                <h1 id="getStarted"> Contributors</h1>
+                <h1> Contributors</h1>
                 {
                     contributors.length && contributors.map( contributor => {
-                        console.log(contributor);
                         return (
-                            <a href={contributor.html_url}>
+                            <a href={contributor.html_url} key={contributor.login}>
                                 <img className="contributor__image" src={contributor.avatar_url} alt={contributor.login}/>
                             </a>
                         )
@@ -38,6 +37,6 @@ const ContributorsSection = () => {
             </section>
         </div>
     )
-}
+})
 
 export { ContributorsSection }

@@ -12,7 +12,7 @@ const Header = () => (
             <code><FormattedMessage id="header.description" defaultMessage="const GoogleSheetToJson = require('GoogleSheetToJson');" /></code>
           </p>
           <section className="buttons__container">
-            <Button>Github</Button>
+            <Button link="https://github.com/apptension/google-sheet-to-json" target="_blank">Github</Button>
             <Button link="#getStarted">Get Started</Button>
           </section>
         </div>
