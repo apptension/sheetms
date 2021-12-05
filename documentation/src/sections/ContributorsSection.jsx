@@ -1,4 +1,5 @@
 import {useState, useEffect, memo} from 'react'
+import { FormattedMessage } from 'react-intl';
 
 function getUser(username) {
     return fetch(`https://api.github.com/users/${username}`)
@@ -23,7 +24,7 @@ const ContributorsSection = memo(() => {
     return (
         <div className="container">
             <section className="contributors__section">
-                <h1> Contributors</h1>
+                <h1> <FormattedMessage id="contributors.title" defaultMessage="Contributors"/></h1>
                 {
                     contributors.length && contributors.map( contributor => {
                         return (

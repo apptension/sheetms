@@ -9,11 +9,11 @@ const Header = () => (
           <h1> <FormattedMessage id="header.title" defaultMessage="Hello" /></h1>
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            <code><FormattedMessage id="header.description" defaultMessage="const GoogleSheetToJson = require('GoogleSheetToJson');" /></code>
+            <code><FormattedMessage id="header.description" defaultMessage="const GoogleSheetToJson = require('sheetms-webpack-plugin');" /></code>
           </p>
           <section className="buttons__container">
             <Button link="https://github.com/apptension/google-sheet-to-json" target="_blank">Github</Button>
-            <Button link="#getStarted">Get Started</Button>
+            <Button link="#getStarted"><FormattedMessage id="button.start" defaultMessage="Get Started" /></Button>
           </section>
         </div>
       </header>

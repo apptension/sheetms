@@ -11,6 +11,28 @@ function App() {
   return (
     <div className="App">
       <Header/>
+
+      <section>
+        <div className="container">
+          <h1 className="welcome__title"> <FormattedMessage id="welcome.title" defaultMessage="Revolutionary and easy" /><span className="title--strong">CMS</span></h1>
+          <ul>
+            <li className="welcome__paragraph">
+
+              <FormattedMessage id="welcome.first" defaultMessage="Because managing translations & copy files can be a nightmare, and the available translations services are expensive, requires a learning process and is difficult to maintain." />
+
+            </li>
+            <li className="welcome__paragraph">
+            <FormattedMessage id="welcome.second" defaultMessage='Spreadsheets are widely known and a "must have" tool for any organization.' />
+            </li>
+            <li className="welcome__paragraph">
+
+            <FormattedMessage id="welcome.third" defaultMessage="Using spreadsheets to keep your copy and translations is not only free, easy to use and cool, but is the Sheet! 💩" />
+
+            </li>
+          </ul>
+        </div>
+      </section>
+
       <Section title={<FormattedMessage id="howItWorks.title" defaultMessage="How it works?" />} imgSrc={img1} sectionTitle={'Create a Google Spreadsheet'}>
         <p>
             <FormattedMessage id="howItWorks.description" defaultMessage={`Create a Google Spreadsheet and fill it with wanted data. In "A" column place keys and in the "B" column type the relevant translation.`} />
