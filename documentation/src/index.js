@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import { IntlProvider } from 'react-intl';
 import reportWebVitals from './reportWebVitals';
-import DEFAULT_LANGUAGE from './translations/en.json';
+import DEFAULT_LANGUAGE from './translations/default/en.json';
 
 const importTranslationFile = async () => {
     try {

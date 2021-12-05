@@ -563,7 +563,7 @@ module.exports = function (webpackEnv) {
         spreadsheetId: '1WfK9X8PjLpqp28JwU3mjyt8hdMMsd0t-KHlAk9bQKWc',
         output:  path.join(__dirname, '../src/translations/'),
         apiKey: env.raw.GOOGLE_API_KEY,
-        isDev: isEnvDevelopment
+        forceCreate: isEnvDevelopment
       }),
       // Generates an `index.html` file with the <script> injected.
       new HtmlWebpackPlugin(
