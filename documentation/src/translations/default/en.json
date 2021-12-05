@@ -1,0 +1,65 @@
+{
+  "header.description": {
+    "defaultMessage": "const GoogleSheetToJson = require('GoogleSheetToJson');"
+  },
+  "header.title": {
+    "defaultMessage": "Hello"
+  },
+  "howItWorks.browser": {
+    "defaultMessage": "browser languages list"
+  },
+  "howItWorks.configure": {
+    "defaultMessage": "Configure"
+  },
+  "howItWorks.create": {
+    "defaultMessage": "Create a configuration of the plugin in"
+  },
+  "howItWorks.description": {
+    "defaultMessage": "Create a Google Spreadsheet and fill it with wanted data. In \"A\" column place keys and in the \"B\" column type the relevant translation."
+  },
+  "howItWorks.enGB": {
+    "defaultMessage": "en-GB"
+  },
+  "howItWorks.forEnglish": {
+    "defaultMessage": "for English"
+  },
+  "howItWorks.forFrench": {
+    "defaultMessage": "for French spoken in France"
+  },
+  "howItWorks.forGBEnglish": {
+    "defaultMessage": "for English spoken in United Kingdom"
+  },
+  "howItWorks.frFr": {
+    "defaultMessage": "fr-FR"
+  },
+  "howItWorks.getContent": {
+    "defaultMessage": "Get your content!"
+  },
+  "howItWorks.install": {
+    "defaultMessage": "Install package in your project"
+  },
+  "howItWorks.installCommand": {
+    "defaultMessage": "Run yarn add or npm install command in order to add the package to your project"
+  },
+  "howItWorks.list": {
+    "defaultMessage": "List you can find here:"
+  },
+  "howItWorks.name": {
+    "defaultMessage": "Name the spreadsheet"
+  },
+  "howItWorks.nameSpreadsheet": {
+    "defaultMessage": "Name the spreadsheets as languages name provided by browser namespace."
+  },
+  "howItWorks.package": {
+    "defaultMessage": "npm i sheetms-webpack-plugin"
+  },
+  "howItWorks.title": {
+    "defaultMessage": "How it works?"
+  },
+  "howItWorks.useContent": {
+    "defaultMessage": "Use content generated in"
+  },
+  "howItWorks.warning": {
+    "defaultMessage": "Remember to place the keys in A column and translations in the B column"
+  }
+}
