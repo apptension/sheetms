@@ -3,7 +3,7 @@
 Because managing translations & copy files can be a nightmare, and the available translations services are expensive,
 requires a learning process and is difficult to maintain. Spreadsheets are 
 widely known and a "must have" tool for any organization. Using spreadsheets to keep
-your copy and translations is not only free, easy to use and cool, is the Sheet! 💩
+your copy and translations is not only free, easy to use and cool, but is the Sheet! 💩
 
 ## How does it work?
 
@@ -36,4 +36,4 @@ new GoogleSheetToJson({
 `apiKey`: string - Your Google App api key. [Click here to learn how to create one.](https://developers.google.com/workspace/guides/create-project)
 
 `forceCreate`: boolean - Forces the creation of all translation files. Useful when cold starting a project, and usually
-is set to true during development. Defaults to `false`.
+is set to true during development. Defaults to `false`. 
