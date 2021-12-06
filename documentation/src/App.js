@@ -88,7 +88,7 @@ function App() {
             <div className="comment">//Add this config in your plugins in webpack.config.js</div>
             <div>new GoogleSheetToJson({`{`} </div>
             <div className="space">spreadsheetId:<span className="string"> 'mySecretSpreadsheetId'</span>,</div>
-            <div className="space">output:  path.join(__dirname, <span className="string">'yourTranslations.json'</span>),</div>
+            <div className="space">output:  path.join(__dirname, <span className="string">'../src/translations/'</span>),</div>
             <div className="space">apiKey: yourApiKey,</div>
             <div className="space">forceCreate: isEnvDevelopment</div>
             <div>{`}`})</div>
