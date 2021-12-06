@@ -26,8 +26,7 @@ const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpackPlugin');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
-const GoogleSheetToJson = require('../../index');
-// const GoogleSheetToJson = require('../../index');
+const SheeTMS = require('sheetms-webpack-plugin');
 
 const postcssNormalize = require('postcss-normalize');
 
@@ -559,7 +558,7 @@ module.exports = function (webpackEnv) {
       ],
     },
     plugins: [
-      new GoogleSheetToJson({
+      new SheeTMS({
         spreadsheetId: '1WfK9X8PjLpqp28JwU3mjyt8hdMMsd0t-KHlAk9bQKWc',
         output:  path.join(__dirname, '../src/translations/'),
         apiKey: env.raw.GOOGLE_API_KEY,
