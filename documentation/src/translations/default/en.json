@@ -1,6 +1,6 @@
 {
   "header.description": {
-    "defaultMessage": "const GoogleSheetToJson = require('GoogleSheetToJson');"
+    "defaultMessage": "const SheeTMS = require('GoogleSheetToJson');"
   },
   "header.title": {
     "defaultMessage": "Hello"
